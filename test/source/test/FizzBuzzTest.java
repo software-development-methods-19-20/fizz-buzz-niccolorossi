@@ -24,8 +24,28 @@ public class FizzBuzzTest {
     }
 
     @Test
-    void testMultipleBoth() {
+    void testMultipleThreeFive() {
         assertThat(FizzBuzz.print(15), is("FizzBuzz"));
+    }
+
+    @Test
+    void testMultipleSeven() {
+        assertThat(FizzBuzz.print(14), is("Bang"));
+    }
+
+    @Test
+    void testMultipleThreeSeven() {
+        assertThat(FizzBuzz.print(21), is("FizzBang"));
+    }
+
+    @Test
+    void testMultipleFiveSeven() {
+        assertThat(FizzBuzz.print(35), is("BuzzBang"));
+    }
+
+    @Test
+    void testMultipleAll() {
+        assertThat(FizzBuzz.print(105), is("FizzBuzzBang"));
     }
 
 }

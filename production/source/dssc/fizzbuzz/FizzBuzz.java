@@ -8,12 +8,16 @@ public class FizzBuzz {
         String toReturn = "";
         boolean isMultipleThree = number % 3 == 0;
         boolean isMultipleFive = number % 5 == 0;
+        boolean isMultipleSeven = number % 7 == 0;
 
         if(isMultipleThree) {
             toReturn += "Fizz";
         }
         if(isMultipleFive) {
             toReturn += "Buzz";
+        }
+        if(isMultipleSeven) {
+            toReturn += "Bang";
         }
         if(toReturn.isEmpty()) {
             toReturn = Integer.toString(number);
