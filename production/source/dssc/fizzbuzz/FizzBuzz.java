@@ -26,4 +26,10 @@ public class FizzBuzz {
 
         return toReturn;
     }
+
+    public static void printInRange(int begin, int end) {
+        for(int i=begin; i<end; i++) {
+            System.out.println(print(i));
+        }
+    }
 }
