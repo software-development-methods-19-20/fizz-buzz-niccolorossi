@@ -2,6 +2,10 @@ package test;
 
 import dssc.fizzbuzz.FizzBuzz;
 import org.junit.jupiter.api.Test;
+
+import java.util.HashMap;
+
+
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.CoreMatchers.is;
 
@@ -9,43 +13,90 @@ public class FizzBuzzTest {
 
     @Test
     void testNonMultiple() {
-        assertThat(FizzBuzz.print(11), is("11"));
+        HashMap<Integer, String> parameters = new HashMap<>();
+        parameters.put(3, "Fizz");
+        parameters.put(5, "Buzz");
+        parameters.put(7, "Bang");
+        FizzBuzz fizzBuzz = new FizzBuzz(parameters);
+
+        assertThat(fizzBuzz.print(11), is("11"));
     }
 
     @Test
     void testMultipleThree() {
-        assertThat(FizzBuzz.print(9), is("Fizz"));
-    }
+        HashMap<Integer, String> parameters = new HashMap<>();
+        parameters.put(3, "Fizz");
+        parameters.put(5, "Buzz");
+        parameters.put(7, "Bang");
+        FizzBuzz fizzBuzz = new FizzBuzz(parameters);
 
+        assertThat(fizzBuzz.print(9), is("Fizz"));
+    }
 
     @Test
     void testMultipleFive() {
-        assertThat(FizzBuzz.print(10), is("Buzz"));
+        HashMap<Integer, String> parameters = new HashMap<>();
+        parameters.put(3, "Fizz");
+        parameters.put(5, "Buzz");
+        parameters.put(7, "Bang");
+        FizzBuzz fizzBuzz = new FizzBuzz(parameters);
+
+        assertThat(fizzBuzz.print(10), is("Buzz"));
     }
 
     @Test
     void testMultipleThreeFive() {
-        assertThat(FizzBuzz.print(15), is("FizzBuzz"));
+        HashMap<Integer, String> parameters = new HashMap<>();
+        parameters.put(3, "Fizz");
+        parameters.put(5, "Buzz");
+        parameters.put(7, "Bang");
+        FizzBuzz fizzBuzz = new FizzBuzz(parameters);
+
+        assertThat(fizzBuzz.print(15), is("FizzBuzz"));
     }
 
     @Test
     void testMultipleSeven() {
-        assertThat(FizzBuzz.print(14), is("Bang"));
+        HashMap<Integer, String> parameters = new HashMap<>();
+        parameters.put(3, "Fizz");
+        parameters.put(5, "Buzz");
+        parameters.put(7, "Bang");
+        FizzBuzz fizzBuzz = new FizzBuzz(parameters);
+
+        assertThat(fizzBuzz.print(14), is("Bang"));
     }
 
     @Test
     void testMultipleThreeSeven() {
-        assertThat(FizzBuzz.print(21), is("FizzBang"));
+        HashMap<Integer, String> parameters = new HashMap<>();
+        parameters.put(3, "Fizz");
+        parameters.put(5, "Buzz");
+        parameters.put(7, "Bang");
+        FizzBuzz fizzBuzz = new FizzBuzz(parameters);
+
+        assertThat(fizzBuzz.print(21), is("FizzBang"));
     }
 
     @Test
     void testMultipleFiveSeven() {
-        assertThat(FizzBuzz.print(35), is("BuzzBang"));
+        HashMap<Integer, String> parameters = new HashMap<>();
+        parameters.put(3, "Fizz");
+        parameters.put(5, "Buzz");
+        parameters.put(7, "Bang");
+        FizzBuzz fizzBuzz = new FizzBuzz(parameters);
+
+        assertThat(fizzBuzz.print(35), is("BuzzBang"));
     }
 
     @Test
     void testMultipleAll() {
-        assertThat(FizzBuzz.print(105), is("FizzBuzzBang"));
+        HashMap<Integer, String> parameters = new HashMap<>();
+        parameters.put(3, "Fizz");
+        parameters.put(5, "Buzz");
+        parameters.put(7, "Bang");
+        FizzBuzz fizzBuzz = new FizzBuzz(parameters);
+
+        assertThat(fizzBuzz.print(105), is("FizzBuzzBang"));
     }
 
 }

@@ -1,33 +1,33 @@
 package dssc.fizzbuzz;
 
+import java.util.HashMap;
+
 public class FizzBuzz {
 
+    private HashMap<Integer, String> parameters;
 
-    public static String print(int number) {
+    public FizzBuzz(HashMap<Integer, String> parameters) {
+        this.parameters = parameters;
+    }
+
+    public String print(int number) {
 
         String toReturn = "";
-        boolean isMultipleThree = number % 3 == 0;
-        boolean isMultipleFive = number % 5 == 0;
-        boolean isMultipleSeven = number % 7 == 0;
 
-        if(isMultipleThree) {
-            toReturn += "Fizz";
+        for (Integer key : parameters.keySet()) {
+            if(number % key == 0) {
+                toReturn += parameters.get(key);
+            }
         }
-        if(isMultipleFive) {
-            toReturn += "Buzz";
-        }
-        if(isMultipleSeven) {
-            toReturn += "Bang";
-        }
+
         if(toReturn.isEmpty()) {
             toReturn = Integer.toString(number);
         }
 
-
         return toReturn;
     }
 
-    public static void printInRange(int begin, int end) {
+    public void printInRange(int begin, int end) {
         for(int i=begin; i<end; i++) {
             System.out.println(print(i));
         }
